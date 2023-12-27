@@ -5,8 +5,8 @@ import WebKit
 // MARK: - YouTubePlayerWebView
 
 /// The YouTubePlayer WebView
-final class YouTubePlayerWebView: WKWebView {
-    
+public final class YouTubePlayerWebView: WKWebView {
+
     // MARK: Properties
     
     /// The YouTubePlayer
@@ -74,7 +74,7 @@ final class YouTubePlayerWebView: WKWebView {
     
     #if os(iOS)
     /// Layout Subviews
-    override func layoutSubviews() {
+    public override func layoutSubviews() {
         super.layoutSubviews()
         // Send frame on Layout Subject
         self.layoutLifecycleSubject.send(self.frame)

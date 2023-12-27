@@ -10,7 +10,7 @@ extension YouTubePlayerWebView: WKNavigationDelegate {
     ///   - webView: The WKWebView
     ///   - navigationAction: The WKNavigationAction
     ///   - decisionHandler: The decision handler
-    func webView(
+    public func webView(
         _ webView: WKWebView,
         decidePolicyFor navigationAction: WKNavigationAction,
         decisionHandler: @escaping (WKNavigationActionPolicy) -> Void
@@ -64,7 +64,7 @@ extension YouTubePlayerWebView: WKNavigationDelegate {
     
     /// Invoked when the web view's web content process is terminated.
     /// - Parameter webView: The web view whose underlying web content process was terminated.
-    func webViewWebContentProcessDidTerminate(
+    public func webViewWebContentProcessDidTerminate(
         _ webView: WKWebView
     ) {
         // Send web content process did terminate event
